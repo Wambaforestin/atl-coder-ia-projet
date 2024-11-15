@@ -9,9 +9,9 @@ CSV_PATH = os.path.join(BASE_DIR, 'data', 'users_data.csv')
 
 @app.route('/')
 def dashboard():
-    users_data = pd.read_csv(CSV_PATH)
-    users_data_json = users_data.to_dict(orient='records')
-    return render_template('index.html', users_data=users_data_json)
+    users_data = pd.read_csv(CSV_PATH) # Charge les données utilisateur à partir du fichier CSV
+    users_data_json = users_data.to_dict(orient='records') # Convertit les données en format JSON
+    return render_template('index.html', users_data=users_data_json) # Rend le template HTML avec les données utilisateur
 
 if __name__ == '__main__':
     app.run(debug=True)
