@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord d'Analyse Utilisateur</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>
+                    <span>Analyse Utilisateur</span>
+                </h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Tableau de Bord</a></li>
+                    <li><a href="#">Revenus</a></li>
+                    <li><a href="#">Rapports</a></li>
+                    <li><a href="#">Événements</a></li>
+                    <li><a href="#">Calendrier</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                    <li><a href="#">Compte</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <div class="menu-toggle">
+                </div>
+                <div class="user-info">
+                    <span>Administrateur</span>
+                    <div class="user-avatar">
+                        <img src="{{ url_for('static', filename='admin-img.jpg') }}" alt="User Avatar">
+                    </div>
+                </div>
+            </header>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Utilisateurs</h3>
+                    <p id="total-users"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Âge Moyen</h3>
+                    <p id="average-age"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Achats Totaux</h3>
+                    <p id="total-purchases"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pays Uniques</h3>
+                    <p id="unique-countries"></p>
+                </div>
+            </div>
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>Répartition par Âge</h3>
+                    <div id="age-distribution-chart"></div>
+                </div>
+                <div class="chart-card">
+                    <h3>Achats par Pays</h3>
+                    <div id="purchases-by-country-chart"></div>
+                </div>
+                <div class="chart-card">
+                    <h3>Répartition par Genre</h3>
+                    <div id="gender-distribution-chart"></div>
+                </div>
+                <div class="chart-card">
+                    <h3>Achats par Genre</h3>
+                    <div id="purchases-by-gender-chart"></div>
+                </div>
+                <div class="chart-card">
+                    <h3>Nuage de Mots des Pays</h3>
+                    <div id="country-wordcloud-chart"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="data-json" style="display: none;">{{ users_data | tojson }}</div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

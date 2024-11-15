@@ -1,0 +1,15 @@
+# Ignorer l'environnement virtuel
+env/
+__pycache__/
+
+# Ignorer les fichiers temporaires
+*.pyc
+*.pyo
+*.log
+
+# Dossiers spécifiques aux IDE
+.vscode/
+.idea/
+
+# Ignorer les fichiers de données temporaires
+backend/data/*.csv
