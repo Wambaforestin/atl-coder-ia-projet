@@ -1,6 +1,7 @@
 # Dashboard Analytique Utilisateur (Altelier coder avec IA EPSI)
 
 ## Objectif
+
 Ce projet vise à développer un tableau de bord analytique interactif pour visualiser et analyser des données utilisateur. Il offre une interface intuitive et des visualisations dynamiques pour explorer les tendances et les insights des données.
 
 ## Technologies Utilisées
@@ -26,12 +27,14 @@ Ce projet vise à développer un tableau de bord analytique interactif pour visu
 ### Étapes d'Installation
 
 1. Cloner le dépôt :
+
    ```bash
    git clone <URL_DU_DEPOT>
    cd dashboard-analytique-utilisateur
    ```
 
 2. Créer et activer un environnement virtuel :
+
    ```bash
    python -m venv env
 
@@ -43,11 +46,15 @@ Ce projet vise à développer un tableau de bord analytique interactif pour visu
    ```
 
 3. Installer les dépendances :
+
    ```bash
    pip install -r requirements.txt
+   
+   note: note : rassurez-vous d'étre dans le repertoire dashboard-analytique pour lancer la commande 
    ```
 
 4. Lancer l'application :
+
    ```bash
    python app.py
    ```
@@ -68,7 +75,3 @@ Une fois l'application lancée, vous verrez un tableau de bord interactif avec p
 
 ![Dashboard Overview](/dashboard-analytique/dashboard_overview.png)
 *Vue d'ensemble du tableau de bord*
-
-## Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
